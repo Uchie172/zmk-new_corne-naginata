@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '=', s: +}
-  - LGUI
+  - {t: INT MUHENKAN, h: LGUI}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Movement}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
-  - RGUI
+  - {t: INT KANA, h: RGUI}
   Number:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (
