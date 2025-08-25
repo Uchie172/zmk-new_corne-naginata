@@ -68,141 +68,38 @@
         tap-ms = <30>;
     };
 
-    macros {
-        ng_on: ng_on {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>;
-        };
-
-        ng_off: ng_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
-        };
-
-        kakko: kakko {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_PARENTHESIS &kp RPAR &kp LC(B)>;
-
-            label = "KAKKO";
-        };
-
-        ng_kakko1: ng_kakko1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_PARENTHESIS &kp RPAR &kp ENTER &kp LC(B)>;
-
-            label = "NG_KAKKO1";
-        };
-
-        ng_kakko2: ng_kakko2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LPAR &kp RPAR>;
-
-            label = "NG_KAKKO2";
-            wait-ms = <300>;
-            tap-ms = <150>;
-        };
-
-        win_mode: win_mode {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&to 8 &bt BT_SEL 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(230,100,48) &rgb_ug RGB_EFF>;
-
-            label = "WIN_MODE";
-        };
-
-        mac_mode: mac_mode {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&to 0 &bt BT_SEL 0 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,50) &rgb_ug RGB_EFR>;
-
-            label = "MAC_MODE";
-        };
-
-        ng_off_win: ng_off_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 8>;
-
-            label = "NG_OFF_WIN";
-        };
-
-        ng_on_win: ng_on_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 10>;
-
-            label = "NG_ON_WIN";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
         Browse {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <29 14>;
             layers = <0>;
         };
 
         Media {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <15 30>;
             layers = <0>;
         };
 
-        combo_ng_on {
-            timeout-ms = <300>;
-            key-positions = <22 23>;
-            bindings = <&ng_on>;
-            layers = <0>;
-        };
-
-        combo_ng_off {
-            timeout-ms = <300>;
-            key-positions = <17 18>;
-            bindings = <&ng_off>;
-            layers = <0 1>;
-        };
-
         System {
-            bindings = <&to 7>;
+            bindings = <&to 6>;
             key-positions = <40 26 11>;
             layers = <0>;
             timeout-ms = <300>;
         };
 
-        ng_nakaguro {
-            bindings = <&kp SLASH>;
-            key-positions = <23 24 5>;
-            layers = <1 10>;
-            timeout-ms = <300>;
-            require-prior-idle-ms = <0>;
-        };
-
         ng_Kata {
             bindings = <&kp LC(K)>;
             key-positions = <24 38>;
-            layers = <1>;
             timeout-ms = <300>;
         };
 
         Emo {
             bindings = <&kp LG(LC(SPACE))>;
             key-positions = <26 40>;
-            layers = <1 0>;
+            layers = <0>;
             timeout-ms = <300>;
         };
 
@@ -210,49 +107,11 @@
             bindings = <&kp LC(J)>;
             key-positions = <23 37>;
             timeout-ms = <300>;
-            layers = <1>;
-        };
-
-        kakko {
-            bindings = <&kakko>;
-            key-positions = <23 24 17>;
-            layers = <0 8>;
-            timeout-ms = <300>;
-        };
-
-        ng_kakko1 {
-            bindings = <&ng_kakko1>;
-            key-positions = <17 23 24>;
-            layers = <1 10>;
-            timeout-ms = <300>;
-        };
-
-        ng_kakko2 {
-            bindings = <&ng_kakko2>;
-            key-positions = <24 15 25>;
-            layers = <1 10>;
-            timeout-ms = <300>;
-            slow-release;
         };
 
         windowskey {
             bindings = <&kp LEFT_WIN>;
             key-positions = <42 43>;
-            timeout-ms = <300>;
-            layers = <8>;
-        };
-
-        win_mode {
-            bindings = <&win_mode>;
-            key-positions = <7 22 36>;
-            layers = <0>;
-            timeout-ms = <300>;
-        };
-
-        Mac_mode {
-            bindings = <&mac_mode>;
-            key-positions = <7 22 36>;
-            layers = <8>;
             timeout-ms = <300>;
         };
     };
@@ -266,23 +125,11 @@
 &mt_impl LALT ESCAPE       &kp Q  &kp W  &kp E     &kp R                &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O    &kp P      &kp SINGLE_QUOTE
 &mt_impl LEFT_CONTROL TAB  &kp A  &kp S  &kp D     &kp F                &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &kp L    &kp MINUS  &kp SEMI
 &td0                       &kp Z  &kp X  &kp C     &kp V                &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT  &kp FSLH   &kp EQUAL
-                                         &kp LGUI  &mt_impl LALT SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &ng_on
+                                         &kp LGUI  &mt_impl LALT SPACE  &lt_impl 1 DEL                                                &lt_impl 2 BACKSPACE  &lt_impl 3 ENTER  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Mac";
-        };
-
-        naginata_layer {
-            bindings = <
-&kp ESCAPE  &ng Q  &ng W  &ng E    &ng R      &ng T                                   &kp UP                &ng Y                 &ng U      &ng I      &ng O    &ng P     &kp SINGLE_QUOTE
-&kp TAB     &ng A  &ng S  &ng D    &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J      &ng K      &ng L    &ng SEMI  &kp MINUS
-&td0        &ng Z  &ng X  &ng C    &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M      &ng COMMA  &ng DOT  &ng FSLH  &kp EQUAL
-                          &ng_off  &ng SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &ng ENTER  &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            label = "NAGINATA";
         };
 
         Layer_2 {
@@ -355,67 +202,6 @@
 
             sensor-bindings = <&rgb_encoder>;
             label = "Settings";
-        };
-
-        Windows {
-            display-name = "Win";
-            bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E             &kp R           &kp T                                    &kp UP                &kp Y                  &kp U             &kp I       &kp O    &kp P      &kp SINGLE_QUOTE
-&kp TAB     &kp A  &kp S  &kp D             &kp F           &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                  &kp J             &kp K       &kp L    &kp MINUS  &kp SEMI
-&td0        &kp Z  &kp X  &kp C             &kp V           &kp B            &kp K_MUTE              &kp DOWN              &kp N                  &kp M             &kp COMMA   &kp DOT  &kp FSLH   &kp EQUAL
-                          &kp LEFT_CONTROL  &mt LALT SPACE  &lt_impl 11 DEL                                                &lt_impl 12 BACKSPACE  &lt_impl 9 ENTER  &ng_on_win
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            label = "Win";
-        };
-
-        Win2 {
-            label = "W_Shortcut";
-            bindings = <
-&kp K_MUTE    &none  &none       &kp LG(E)  &none  &none                            &none         &kp F7               &kp F8         &kp F9  &kp F10          &kp F11              &kp F12
-&kp C_VOL_DN  &none  &kp LG(D)   &none      &none  &none                     &none  &none  &none  &none                &kp F2         &kp F3  &kp F4           &kp F5               &kp F6
-&kp C_VOL_UP  &none  &kp LA(F4)  &none      &none  &kp LC(LA(DEL))  &none           &none         &kp LG(PRINTSCREEN)  &kp LG(LS(S))  &none   &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &none
-                                 &none      &none  &none                                          &none                &none          &none
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_10 {
-            label = "W_NAGINATA";
-            bindings = <
-&kp ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U      &ng I      &ng O    &ng P     &kp SINGLE_QUOTE
-&kp TAB     &ng A  &ng S  &ng D        &ng F      &ng G                          &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                  &ng J      &ng K      &ng L    &ng SEMI  &kp MINUS
-&td0        &ng Z  &ng X  &ng C        &ng V      &ng B            &kp K_MUTE              &kp DOWN              &ng N                  &ng M      &ng COMMA  &ng DOT  &ng FSLH  &kp EQUAL
-                          &ng_off_win  &ng SPACE  &lt_impl 11 DEL                                                &lt_impl 12 BACKSPACE  &ng ENTER  &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        layer_11 {
-            label = "W_Num";
-            bindings = <
-&none  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                              &kp LC(UP_ARROW)                   &kp KP_EQUAL     &kp N7  &kp N8   &kp N9  &kp KP_PLUS      &kp BACKSPACE
-&none  &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_MULTIPLY  &kp N4  &kp N5   &kp N6  &kp KP_SUBTRACT  &kp COLON
-&none  &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &none  &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp COLON        &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &kp KP_ASTERISK
-                                    &none             &kp LSHFT          &none                                                                 &kp ENTER        &kp N0  &kp DOT
-            >;
-
-            sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
-        };
-
-        layer_12 {
-            label = "W_Mov";
-            bindings = <
-&none  &none     &none     &kp UP_ARROW    &kp PAGE_UP    &none                    &none         &none  &none           &none     &none  &none  &none
-&none  &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &kp END           &none  &none  &none  &none  &none           &none     &none  &none  &none
-&none  &none     &none     &none           &kp PAGE_DOWN  &none    &none           &none         &none  &none           &none     &none  &none  &none
-                           &none           &none          &none                                  &none  &kp LEFT_SHIFT  &kp LGUI
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
     };
 
