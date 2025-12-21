@@ -189,7 +189,7 @@ layers:
   - {t: Sft+Gui+5, s: Sft+Gui+%}
   - Sft+Ctl+Gui+3
   - Sft+Ctl+Gui+4
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Gui+5
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
