@@ -146,10 +146,10 @@
 
         Layer_3 {
             bindings = <
-&kp C_MENU_ESC  &none     &none     &kp UP_ARROW    &kp PAGE_UP    &none                    &none         &none  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
-&none           &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &kp END           &none  &none  &none  &none  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
-&none           &none     &none     &none           &kp PAGE_DOWN  &none    &none           &none         &none  &none             &none               &none      &none  &none
-                                    &none           &none          &none                                  &none  &kp LEFT_SHIFT    &kp LGUI
+&none  &none     &none     &kp UP_ARROW    &kp PAGE_UP    &none                    &none         &none  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
+&none  &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &kp END           &none  &none  &none  &none  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
+&none  &none     &none     &none           &kp PAGE_DOWN  &none    &none           &none         &none  &none             &none               &none      &none  &none
+                           &none           &none          &none                                  &none  &kp LEFT_SHIFT    &kp LGUI
             >;
 
             sensor-bindings = <&scroll_encoder>;
