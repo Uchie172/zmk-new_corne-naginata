@@ -50,7 +50,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
   - RGUI
   Number:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
   - (
   - )
   - {t: '`', s: '~'}
