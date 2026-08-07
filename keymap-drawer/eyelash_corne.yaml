@@ -353,12 +353,8 @@ combos:
 - p: [40, 26, 11]
   k: {t: Settings, h: toggle}
   l: [Mac]
-- p: [24, 38]
-  k: Ctl+K
 - p: [26, 40]
   k: Gui+Ctl+$$mdi:keyboard-space$$
   l: [Mac]
-- p: [23, 37]
-  k: Ctl+J
 - p: [42, 43]
   k: LEFT WIN
