@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
-#include <behaviors/naginata.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -90,12 +89,6 @@
             timeout-ms = <300>;
         };
 
-        ng_Kata {
-            bindings = <&kp LC(K)>;
-            key-positions = <24 38>;
-            timeout-ms = <300>;
-        };
-
         Emo {
             bindings = <&kp LG(LC(SPACE))>;
             key-positions = <26 40>;
@@ -103,11 +96,6 @@
             timeout-ms = <300>;
         };
 
-        ng_Hira {
-            bindings = <&kp LC(J)>;
-            key-positions = <23 37>;
-            timeout-ms = <300>;
-        };
 
         windowskey {
             bindings = <&kp LEFT_WIN>;
