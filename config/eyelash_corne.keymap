@@ -131,10 +131,10 @@
 
         Layer_1 {
             bindings = <
-&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                      &kp LC(UP_ARROW)                   &kp KP_EQUAL     &kp N7  &kp N8   &kp N9  &kp KP_PLUS      &kp KP_MULTIPLY
-&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LG(F))                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_MULTIPLY  &kp N4  &kp N5   &kp N6  &kp KP_SUBTRACT  &kp KP_DIVIDE
-&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &kp LS(LC(S))  &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp COLON        &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &kp KP_ASTERISK
-                                         &none             &kp LSHFT          &none                                                                         &kp ENTER        &kp N0  &kp DOT
+&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                      &kp LC(UP_ARROW)                   &kp KP_PLUS   &kp N7  &kp N8   &kp N9  &kp KP_MULTIPLY  &none
+&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LG(F))                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_MINUS  &kp N4  &kp N5   &kp N6  &kp KP_SLASH     &none
+&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &kp LS(LC(S))  &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL     &kp N1  &kp N2   &kp N3  &kp KP_ENTER     &none
+                                         &none             &kp LSHFT          &none                                                                         &kp ENTER     &kp N0  &kp DOT
             >;
 
             label = "Number";
@@ -143,10 +143,10 @@
 
         Layer_2 {
             bindings = <
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11        &kp F12                  &none         &none                 &none                 &none           &none                     &none                     &none
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5         &kp F6            &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
-&none   &none   &none   &none    &kp PAGE_DOWN  &none    &none           &none         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &kp LS(LG(NUMBER_2))
-                        &none    &none          &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12                  &none         &none                 &none                 &none           &none                     &none                     &none
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6            &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
+&none   &none   &none   &none    &none    &none    &none           &none         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &kp LS(LG(NUMBER_2))
+                        &none    &none    &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -155,10 +155,10 @@
 
         Layer_3 {
             bindings = <
-&kp K_MUTE    &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &none  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
-&kp C_VOL_DN  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &none  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
-&kp C_VOL_UP  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &none  &kp LG(TAB)       &kp LS(LG(TAB))     &none      &none  &kp LS(NUMBER_2)
-                                         &none           &none          &none                                    &none  &none             &none
+&kp K_MUTE    &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp F11  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
+&kp C_VOL_DN  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &none    &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
+&kp C_VOL_UP  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &none    &kp LG(TAB)       &kp LS(LG(TAB))     &none      &none  &kp LS(NUMBER_2)
+                                         &none           &none          &none                                    &none    &none             &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
