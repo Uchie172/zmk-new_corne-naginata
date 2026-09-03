@@ -19,14 +19,14 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - F
-  - {t: G, h: LGUI}
+  - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - {t: H, h: RGUI}
+  - H
   - J
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - K
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
   - {t: '-', s: _}
   - '&td0'
@@ -358,3 +358,7 @@ combos:
   l: [Mac]
 - p: [42, 43]
   k: LEFT WIN
+- p: [23, 24]
+  k: $$mdi:apple-keyboard-command$$
+- p: [17, 16]
+  k: $$mdi:apple-keyboard-command$$
