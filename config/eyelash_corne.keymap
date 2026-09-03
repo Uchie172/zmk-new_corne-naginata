@@ -109,10 +109,10 @@
         Mac {
             display-name = "Mac";
             bindings = <
-&mt_impl LALT ESCAPE       &kp Q  &kp W  &kp E     &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &kp A  &kp S  &kp D     &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &kp L    &kp SEMI  &kp MINUS
-&td0                       &kp Z  &kp X  &kp C     &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
-                                         &kp LGUI  &kp SPACE  &lt_impl 1 DEL                                                &lt_impl 2 BACKSPACE  &lt_impl 3 ENTER  &kp RGUI
+&mt_impl LALT ESCAPE       &kp Q             &kp W            &kp E             &kp R      &kp T                                    &kp UP                &kp Y                 &kp U             &kp I        &kp O       &kp P           &kp SINGLE_QUOTE
+&mt_impl LEFT_CONTROL TAB  &mt_impl LSHFT A  &mt_impl LALT S  &mt_impl LCTRL D  &kp F      &mt_impl LGUI G                &kp LEFT  &kp ENTER  &kp RIGHT  &mt RGUI H            &kp J             &mt RCTRL K  &mt RALT L  &mt RSHFT SEMI  &kp MINUS
+&td0                       &kp Z             &kp X            &kp C             &kp V      &kp B            &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA    &kp DOT     &kp FSLH        &kp EQUAL
+                                                              &kp LGUI          &kp SPACE  &lt_impl 1 DEL                                                 &lt_impl 2 BACKSPACE  &lt_impl 3 ENTER  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
