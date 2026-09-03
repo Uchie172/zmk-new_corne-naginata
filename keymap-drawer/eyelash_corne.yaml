@@ -57,12 +57,12 @@ layers:
   - '~'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:arrow-up-bold$$
-  - KP EQUAL
+  - KP PLUS
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - KP PLUS
   - KP MULTIPLY
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -72,12 +72,12 @@ layers:
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+P
   - Ctl+$$mdi:arrow-right-bold$$
-  - KP MULTIPLY
+  - KP MINUS
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - KP SUBTRACT
-  - KP DIVIDE
+  - KP SLASH
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '{'
   - '}'
@@ -86,12 +86,12 @@ layers:
   - Sft+Ctl+S
   - {t: Gui+0, s: Gui+)}
   - Ctl+$$mdi:arrow-down-bold$$
-  - ':'
+  - {t: '=', s: +}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - KP DIVIDE
-  - KP ASTERISK
+  - KP ENTER
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
@@ -131,7 +131,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgDn
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -155,7 +155,7 @@ layers:
   - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F11
   - Ctl+$$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-down-bold$$
   - Ctl+P
