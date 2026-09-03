@@ -109,7 +109,7 @@
 
         EN {
             bindings = <&kp LEFT_COMMAND>;
-            key-positions = <16 31>;
+            key-positions = <16 17>;
         };
     };
 
@@ -119,10 +119,10 @@
         Mac {
             display-name = "Mac";
             bindings = <
-&mt_impl LALT ESCAPE       &kp Q             &kp W            &kp E             &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O                    &kp P                &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &mt_impl LSHFT A  &mt_impl LALT S  &mt_impl LCTRL D  &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
-&td0                       &kp Z             &kp X            &kp C             &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
-                                                              &kp LGUI          &kp SPACE  &lt_impl 1 DEL                                                &lt_impl 2 BACKSPACE  &lt_impl 3 ENTER  &kp RGUI
+&mt_impl LALT ESCAPE       &kp Q         &kp W  &kp E     &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O                    &kp P                &kp SINGLE_QUOTE
+&mt_impl LEFT_CONTROL TAB  &lt_impl 3 A  &kp S  &kp D     &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
+&td0                       &kp Z         &kp X  &kp C     &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
+                                                &kp LGUI  &kp SPACE  &lt_impl 1 DEL                                                &lt_impl 2 BACKSPACE  &lt_impl 3 ENTER  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -131,8 +131,8 @@
 
         Layer_1 {
             bindings = <
-&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                      &kp LC(UP_ARROW)                   &kp KP_EQUAL     &kp N7  &kp N8   &kp N9  &kp KP_PLUS      &none
-&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LG(F))                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_MULTIPLY  &kp N4  &kp N5   &kp N6  &kp KP_SUBTRACT  &kp COLON
+&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                      &kp LC(UP_ARROW)                   &kp KP_EQUAL     &kp N7  &kp N8   &kp N9  &kp KP_PLUS      &kp KP_MULTIPLY
+&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LG(F))                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_MULTIPLY  &kp N4  &kp N5   &kp N6  &kp KP_SUBTRACT  &kp KP_DIVIDE
 &none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &kp LS(LC(S))  &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp COLON        &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &kp KP_ASTERISK
                                          &none             &kp LSHFT          &none                                                                         &kp ENTER        &kp N0  &kp DOT
             >;
@@ -143,22 +143,22 @@
 
         Layer_2 {
             bindings = <
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11        &kp F12                  &none         &none  &none           &none      &none   &none             &none
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5         &kp F6            &none  &none  &none  &none  &kp LG(N1)      &kp LC(U)  &kp F4  &none             &none
-&none   &none   &none   &none    &kp PAGE_DOWN  &none    &none           &none         &none  &none           &none      &none   &kp LS(NUMBER_1)  &kp LS(LG(NUMBER_2))
-                        &none    &none          &none                                  &none  &kp LEFT_SHIFT  &kp LGUI
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11        &kp F12                  &none         &none                 &none                 &none           &none                     &none                     &none
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5         &kp F6            &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
+&none   &none   &none   &none    &kp PAGE_DOWN  &none    &none           &none         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &kp LS(LG(NUMBER_2))
+                        &none    &none          &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp LA(MINUS) LA(EQUAL)>;
             label = "Function&excel";
         };
 
         Layer_3 {
             bindings = <
-&kp K_MUTE    &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &none                 &kp LC(UP_ARROW)      &kp LC(DOWN_ARROW)  &kp LC(P)                 &none                     &none
-&kp C_VOL_DN  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &none                 &kp LC(LEFT)          &kp LC(RIGHT)       &none                     &none                     &none
-&kp C_VOL_UP  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))      &kp LS(LC(LG(NUMBER_3)))  &kp LS(LC(LG(NUMBER_4)))  &kp LS(NUMBER_2)
-                                         &none           &none          &none                                    &none                 &none                 &none
+&kp K_MUTE    &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &none  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
+&kp C_VOL_DN  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &none  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
+&kp C_VOL_UP  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &none  &kp LG(TAB)       &kp LS(LG(TAB))     &none      &none  &kp LS(NUMBER_2)
+                                         &none           &none          &none                                    &none  &none             &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
