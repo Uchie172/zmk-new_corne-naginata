@@ -358,7 +358,7 @@ combos:
   l: [Mac]
 - p: [42, 43]
   k: LEFT WIN
-- p: [23, 24]
+- p: [23, 37]
   k: $$mdi:apple-keyboard-command$$
-- p: [17, 16]
+- p: [16, 31]
   k: $$mdi:apple-keyboard-command$$
