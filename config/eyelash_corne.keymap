@@ -109,7 +109,7 @@
 
         EN {
             bindings = <&kp LEFT_COMMAND>;
-            key-positions = <16 17>;
+            key-positions = <17 32>;
         };
     };
 
@@ -149,7 +149,7 @@
                         &none    &none          &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(MINUS) LA(EQUAL)>;
+            sensor-bindings = <&scroll_encoder>;
             label = "Function&excel";
         };
 
