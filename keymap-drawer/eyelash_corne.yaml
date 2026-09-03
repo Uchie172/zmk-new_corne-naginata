@@ -360,5 +360,5 @@ combos:
   k: LEFT WIN
 - p: [23, 37]
   k: $$mdi:apple-keyboard-command$$
-- p: [16, 17]
+- p: [17, 32]
   k: $$mdi:apple-keyboard-command$$
