@@ -15,9 +15,9 @@ layers:
   - P
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: A, h: Shortcuts}
+  - S
+  - D
   - F
   - G
   - $$mdi:arrow-left-bold$$
@@ -62,7 +62,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - KP PLUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - KP MULTIPLY
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -77,7 +77,7 @@ layers:
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - KP SUBTRACT
-  - ':'
+  - KP DIVIDE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '{'
   - '}'
@@ -135,11 +135,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+1
+  - Sft+Gui+3
+  - Sft+Gui+4
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
+  - Sft+Ctl+Gui+3
+  - Sft+Gui+Ctl+4
   - Sft+Gui+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -162,7 +162,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-low$$
-  - Ctl+A
+  - {t: Ctl+A, type: held}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -184,17 +184,17 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Sft+3
-  - Sft+Gui+4
-  - {t: Sft+Gui+5, s: Sft+Gui+%}
-  - Sft+Ctl+Gui+3
-  - Sft+Ctl+Gui+4
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+$$mdi:keyboard-tab$$
+  - Sft+Gui+$$mdi:keyboard-tab$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   Browse:
   - {t: Mac, h: toggle}
@@ -360,5 +360,5 @@ combos:
   k: LEFT WIN
 - p: [23, 37]
   k: $$mdi:apple-keyboard-command$$
-- p: [16, 31]
+- p: [16, 17]
   k: $$mdi:apple-keyboard-command$$
