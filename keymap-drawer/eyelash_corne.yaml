@@ -63,7 +63,7 @@ layers:
   - '&ng O'
   - '&ng P'
   - '"'
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '&ctrl_shortcut'}
   - '&ng A'
   - '&ng S'
   - '&ng D'
