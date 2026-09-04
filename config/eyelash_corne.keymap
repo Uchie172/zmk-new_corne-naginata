@@ -163,10 +163,10 @@
         layer_1 {
             display-name = "Naginata";
             bindings = <
-&mt_impl LALT ESCAPE       &ng Q  &ng W  &ng E   &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O    &ng P     &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &ng A  &ng S  &ng D   &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &ng L    &ng SEMI  &kp MINUS
-&td0                       &ng Z  &ng X  &ng C   &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT  &ng FSLH  &kp EQUAL
-                                         &trans  &ng SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &trans
+&mt_impl LALT ESCAPE       &ng Q  &ng W  &ng E    &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O    &ng P     &kp SINGLE_QUOTE
+&mt_impl LEFT_CONTROL TAB  &ng A  &ng S  &ng D    &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &ng L    &ng SEMI  &kp MINUS
+&td0                       &ng Z  &ng X  &ng C    &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT  &ng FSLH  &kp EQUAL
+                                         &ng_off  &ng SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
