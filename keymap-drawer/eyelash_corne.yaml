@@ -394,13 +394,13 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [29, 14]
-  k: {t: Nav, h: toggle}
-  l: [Mac]
-- p: [15, 30]
   k: {t: Browse, h: toggle}
   l: [Mac]
-- p: [40, 26, 11]
+- p: [30, 15]
   k: {t: Media, h: toggle}
+  l: [Mac]
+- p: [40, 26, 11]
+  k: {t: Settings, h: toggle}
   l: [Mac]
 - p: [26, 40]
   k: Gui+Ctl+$$mdi:keyboard-space$$

@@ -537,22 +537,22 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="70" y="120" width="28" height="26" class="combo"/>
-<a href="#Nav">
-<text x="84" y="133" class="combo tap layer-activator">Nav</text>
+<a href="#Browse">
+<text x="84" y="133" class="combo tap layer-activator">Browse</text>
 </a><text x="84" y="144" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="126" y="106" width="28" height="26" class="combo"/>
-<a href="#Browse">
-<text x="140" y="119" class="combo tap layer-activator">Browse</text>
+<a href="#Media">
+<text x="140" y="119" class="combo tap layer-activator">Media</text>
 </a><text x="140" y="130" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-2">
 <path d="M896,105 l0,37" class="combo"/>
 <path d="M896,105 l0,-37" class="combo"/>
 <rect rx="6" ry="6" x="882" y="92" width="28" height="26" class="combo"/>
-<a href="#Media">
-<text x="896" y="105" class="combo tap layer-activator">Media</text>
+<a href="#Settings">
+<text x="896" y="105" class="combo tap layer-activator"><tspan style="font-size: 75%">Settings</tspan></text>
 </a><text x="896" y="116" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
