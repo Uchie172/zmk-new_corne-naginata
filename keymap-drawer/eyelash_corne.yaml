@@ -155,8 +155,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Sft+1
+  - Sft+Gui+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -165,8 +165,8 @@ layers:
   - Sft+Ctl+A
   - Sft+Ctl+S
   - Sft+Ctl+D
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Ctl+F
+  - Gui+Ctl+F
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -179,9 +179,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+Ctl+Z
   - Sft+Ctl+X
+  - Sft+Ctl+C
   - Sft+Ctl+V
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Alt+S
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+Gui+3
@@ -189,7 +189,7 @@ layers:
   - {t: Sft+Gui+5, s: Sft+Gui+%}
   - Sft+Ctl+Gui+3
   - Sft+Gui+Ctl+4
-  - Sft+Gui+2
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -204,7 +204,7 @@ layers:
   - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Ctl+F
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-down-bold$$
   - Ctl+P
@@ -219,7 +219,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Alt+S
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -238,7 +238,7 @@ layers:
   - Gui+Sft+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+2
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -460,3 +460,5 @@ combos:
 - p: [17, 32]
   k: '&ng_off'
   l: [Naginata]
+- p: [46, 47]
+  k: Sft+Gui+$$mdi:keyboard-space$$
