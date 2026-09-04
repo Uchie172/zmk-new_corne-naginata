@@ -86,19 +86,19 @@
         compatible = "zmk,combos";
 
         Browse {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <29 14>;
             layers = <0>;
         };
 
         Media {
-            bindings = <&to 5>;
-            key-positions = <15 30>;
+            bindings = <&to 6>;
+            key-positions = <30 15>;
             layers = <0>;
         };
 
         System {
-            bindings = <&to 6>;
+            bindings = <&to 7>;
             key-positions = <40 26 11>;
             layers = <0>;
             timeout-ms = <300>;
