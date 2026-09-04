@@ -160,14 +160,13 @@
             label = "Mac";
         };
 
-
         naginata_layer {
             display-name = "Naginata";
             bindings = <
 &mt_impl LALT ESCAPE       &ng Q         &ng W  &ng E     &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O                    &ng P                &kp SINGLE_QUOTE
 &mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &ng S  &ng D     &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
 &td0                       &ng Z         &ng X  &kp C     &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT                  &ng FSLH             &kp EQUAL
-                                                &kp LGUI  &ng SPACE  &lt_impl 1 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
+                                                &kp LGUI  &ng SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
