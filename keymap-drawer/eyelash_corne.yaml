@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
-  - LANGUAGE 2
+  - LGUI
   Naginata:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   - '&ng Q'
