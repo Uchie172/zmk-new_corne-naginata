@@ -33,11 +33,7 @@
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LGUI &to 0>,
-                <&macro_press>,
-                <&to 0 &kp LGUI>;
+            bindings = <&macro_tap>, <&kp LGUI &to 0>;
         };
     };
 
