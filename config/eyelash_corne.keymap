@@ -160,6 +160,20 @@
             label = "Mac";
         };
 
+
+        naginata_layer {
+            display-name = "Naginata";
+            bindings = <
+&mt_impl LALT ESCAPE       &ng Q         &ng W  &ng E     &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O                    &ng P                &kp SINGLE_QUOTE
+&mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &ng S  &ng D     &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
+&td0                       &ng Z         &ng X  &kp C     &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT                  &ng FSLH             &kp EQUAL
+                                                &kp LGUI  &ng SPACE  &lt_impl 1 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "Naginata";
+        };
+
         Layer_1 {
             bindings = <
 &kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                      &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &none
@@ -170,19 +184,6 @@
 
             label = "Number";
             sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
-        };
-
-        naginata_layer {
-            display-name = "Naginata";
-            bindings = <
-&mt_impl LALT ESCAPE       &ng Q         &ng W  &ng E     &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O                    &ng P                &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &ng S  &ng D     &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
-&td0                       &ng Z         &ng X  &kp C     &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT                  &ng FSLH             &kp EQUAL
-                                                &kp LGUI  &kp SPACE  &lt_impl 1 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            label = "Naginata";
         };
 
         Layer_2 {
