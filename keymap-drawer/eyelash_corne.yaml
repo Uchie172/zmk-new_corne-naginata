@@ -32,7 +32,7 @@ layers:
   - '&td0'
   - Z
   - X
-  - '&ng C'
+  - C
   - V
   - B
   - MUTE
@@ -64,7 +64,7 @@ layers:
   - '&ng P'
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: A, h: Shortcuts}
+  - '&ng A'
   - '&ng S'
   - '&ng D'
   - '&ng F'
@@ -75,8 +75,8 @@ layers:
   - '&ng H'
   - '&ng J'
   - '&ng K'
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - '&ng L'
+  - '&ng SEMI'
   - {t: '-', s: _}
   - '&td0'
   - '&ng Z'
