@@ -32,7 +32,7 @@ layers:
   - '&td0'
   - Z
   - X
-  - C
+  - '&ng C'
   - V
   - B
   - MUTE
