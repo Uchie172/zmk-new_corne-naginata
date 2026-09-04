@@ -131,6 +131,11 @@
             bindings = <&kp LS(LG(SPACE))>;
             key-positions = <46 47>;
         };
+
+        Dictionary {
+            bindings = <&kp LC(LG(D))>;
+            key-positions = <8 9>;
+        };
     };
 
     keymap {
@@ -165,8 +170,8 @@
         Layer_2 {
             bindings = <
 &kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &kp AMPERSAND                              &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &kp PERCENT
-&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE                    &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp BACKSLASH
-&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &none          &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &kp DOLLAR
+&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PERCENT                  &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp BACKSLASH
+&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &kp CARET      &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &kp DOLLAR
                                          &none             &kp LSHFT          &none                                                                         &kp ENTER        &kp N0  &kp DOT
             >;
 
@@ -176,10 +181,10 @@
 
         Layer_3 {
             bindings = <
-&none  &kp LS(LC(LG(Q)))  &kp LC(LS(W))  &kp LS(LC(E))  &none          &none                          &none         &kp LG(LS(NUMBER_1))  &kp LS(LG(NUMBER_2))  &none           &none                     &none                     &none
-&none  &kp LS(LC(A))      &kp LS(LC(S))  &kp LS(LC(D))  &kp LS(LC(F))  &kp LG(LC(F))           &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
-&none  &kp LS(LC(Z))      &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &kp LG(LA(S))  &none           &none         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &none
-                                         &none          &none          &none                                        &none                 &kp LEFT_SHIFT        &kp LGUI
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &none         &kp LG(LS(NUMBER_2))  &kp LS(LG(NUMBER_1))  &none           &none                     &none                     &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12           &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
+&none   &none   &none   &none    &none    &none    &none           &none         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &none
+                        &none    &none    &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
@@ -188,9 +193,9 @@
 
         Layer_4 {
             bindings = <
-&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &none          &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
-&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &none          &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
-&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LA(LS(N))  &kp LG(LS(TAB))   &kp LG(LS(SPACE))   &none      &none  &none
+&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &kp LA(LG(N))  &none
+&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LA(S))  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none          &none
+&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LA(LS(N))  &kp LG(LS(TAB))   &none               &none      &none          &none
                                   &none           &none          &none                                    &none          &none             &none
             >;
 
@@ -232,15 +237,6 @@
 
             sensor-bindings = <&rgb_encoder>;
             label = "Settings";
-        };
-
-        Fn {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans   &trans   &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans   &trans   &trans                                     &trans  &trans  &trans
-            >;
         };
     };
 
