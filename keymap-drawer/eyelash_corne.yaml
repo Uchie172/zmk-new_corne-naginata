@@ -49,55 +49,6 @@ layers:
   - {t: '$$mdi:backspace$$', h: Naginata}
   - {t: '$$mdi:keyboard-return$$', h: Function&excel}
   - RGUI
-  Number:
-  - $$mdi:keyboard-esc$$
-  - (
-  - )
-  - {t: '`', s: '~'}
-  - '~'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+$$mdi:arrow-up-bold$$
-  - KP MULTIPLY
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - KP PLUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: '''', s: '"'}
-  - '"'
-  - Ctl+Gui+F
-  - Ctl+$$mdi:arrow-left-bold$$
-  - Ctl+P
-  - Ctl+$$mdi:arrow-right-bold$$
-  - KP DIVIDE
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - KP MINUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '{'
-  - '}'
-  - {t: \, s: '|'}
-  - '|'
-  - Sft+Ctl+S
-  - {t: Gui+0, s: Gui+)}
-  - Ctl+$$mdi:arrow-down-bold$$
-  - {t: '=', s: +}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - KP ENTER
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '0', s: )}
-  - {t: ., s: '>'}
   Naginata:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   - '&ng Q'
@@ -147,6 +98,55 @@ layers:
   - {t: '$$mdi:backspace$$', h: Naginata, type: held}
   - {t: '$$mdi:keyboard-return$$', h: Function&excel}
   - RGUI
+  Number:
+  - $$mdi:keyboard-esc$$
+  - (
+  - )
+  - {t: '`', s: '~'}
+  - '~'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+$$mdi:arrow-up-bold$$
+  - KP MULTIPLY
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - KP PLUS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '''', s: '"'}
+  - '"'
+  - Ctl+Gui+F
+  - Ctl+$$mdi:arrow-left-bold$$
+  - Ctl+P
+  - Ctl+$$mdi:arrow-right-bold$$
+  - KP DIVIDE
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - KP MINUS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '{'
+  - '}'
+  - {t: \, s: '|'}
+  - '|'
+  - Sft+Ctl+S
+  - {t: Gui+0, s: Gui+)}
+  - Ctl+$$mdi:arrow-down-bold$$
+  - {t: '=', s: +}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - KP ENTER
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:keyboard-return$$', type: held alternate}
+  - {t: '0', s: )}
+  - {t: ., s: '>'}
   Function&excel:
   - F7
   - F8
