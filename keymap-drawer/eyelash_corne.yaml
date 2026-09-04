@@ -104,14 +104,14 @@ layers:
   - )
   - {t: '`', s: '~'}
   - '~'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&'
   - Ctl+$$mdi:arrow-up-bold$$
   - KP MULTIPLY
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - KP PLUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -126,7 +126,7 @@ layers:
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - KP MINUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - INT YEN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '{'
   - '}'
@@ -140,7 +140,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - KP ENTER
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
@@ -204,10 +204,10 @@ layers:
   - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F11
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-down-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -235,7 +235,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+Ctl+S
   - Gui+Sft+$$mdi:keyboard-tab$$
-  - Ctl+P
+  - Gui+Sft+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+2
