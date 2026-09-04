@@ -33,7 +33,7 @@
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LG(LANGUAGE_2) &to 0>;
+            bindings = <&macro_tap>, <&kp LANGUAGE_2 &to 0>;
         };
 
         cmd_shortcut: cmd_shortcut {
