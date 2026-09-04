@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
-  - RGUI
+  - LANGUAGE 2
   Naginata:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   - '&ng Q'
@@ -92,12 +92,12 @@ layers:
   - '&ng DOT'
   - '&ng FSLH'
   - {t: '=', s: +}
-  - LGUI
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&ng SPACE'
   - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
-  - RGUI
+  - {t: '$$mdi:transfer$$', type: trans}
   Number:
   - $$mdi:keyboard-esc$$
   - (
