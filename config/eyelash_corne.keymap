@@ -159,10 +159,10 @@
 
         Layer_2 {
             bindings = <
-&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &none                                  &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &none
-&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE                &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &none
-&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &none      &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &none
-                                         &none             &kp LSHFT          &none                                                                     &kp ENTER        &kp N0  &kp DOT
+&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &kp AMPERSAND                              &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &kp PERCENT
+&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE                    &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp INT_YEN
+&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &none          &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &kp DOLLAR
+                                         &none             &kp LSHFT          &none                                                                         &kp ENTER        &kp N0  &kp DOT
             >;
 
             label = "Number";
@@ -183,9 +183,9 @@
 
         Layer_4 {
             bindings = <
-&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp F11        &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &none  &none  &none
-&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LC(F))  &kp LC(LEFT)      &kp LC(RIGHT)       &none  &none  &none
-&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LS(LC(S))  &kp LG(LS(TAB))   &kp LC(P)           &none  &none  &kp LS(NUMBER_2)
+&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &none          &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
+&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LC(F))  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
+&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LS(LC(S))  &kp LG(LS(TAB))   &kp LG(LS(SPACE))   &none      &none  &kp LS(NUMBER_2)
                                   &none           &none          &none                                    &none          &none             &none
             >;
 
