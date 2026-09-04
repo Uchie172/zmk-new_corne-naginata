@@ -45,7 +45,7 @@ layers:
   - {t: '=', s: +}
   - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Naginata}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
   - RGUI
@@ -94,7 +94,7 @@ layers:
   - {t: '=', s: +}
   - LGUI
   - '&ng SPACE'
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Number, type: held}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
   - RGUI
@@ -192,7 +192,7 @@ layers:
   - Sft+Gui+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-shift$$
   - LGUI
@@ -241,7 +241,7 @@ layers:
   - Sft+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
