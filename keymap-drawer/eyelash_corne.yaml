@@ -45,7 +45,56 @@ layers:
   - {t: '=', s: +}
   - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Naginata}
+  - {t: '$$mdi:backspace$$', h: Function&excel}
+  - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
+  - RGUI
+  Naginata:
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
+  - '&ng Q'
+  - '&ng W'
+  - '&ng E'
+  - '&ng R'
+  - '&ng T'
+  - $$mdi:arrow-up-bold$$
+  - '&ng Y'
+  - '&ng U'
+  - '&ng I'
+  - '&ng O'
+  - '&ng P'
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: A, h: Shortcuts}
+  - '&ng S'
+  - '&ng D'
+  - '&ng F'
+  - '&ng G'
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - '&ng H'
+  - '&ng J'
+  - '&ng K'
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: '-', s: _}
+  - '&td0'
+  - '&ng Z'
+  - '&ng X'
+  - C
+  - '&ng V'
+  - '&ng B'
+  - MUTE
+  - $$mdi:arrow-down-bold$$
+  - '&ng N'
+  - '&ng M'
+  - '&ng COMMA'
+  - '&ng DOT'
+  - '&ng FSLH'
+  - {t: '=', s: +}
+  - LGUI
+  - '&ng SPACE'
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Naginata, type: held}
   - {t: '$$mdi:backspace$$', h: Function&excel}
   - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
   - RGUI
@@ -94,59 +143,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '0', s: )}
   - {t: ., s: '>'}
-  Naginata:
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
-  - '&ng Q'
-  - '&ng W'
-  - '&ng E'
-  - '&ng R'
-  - '&ng T'
-  - $$mdi:arrow-up-bold$$
-  - '&ng Y'
-  - '&ng U'
-  - '&ng I'
-  - '&ng O'
-  - '&ng P'
-  - {t: '''', s: '"'}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: A, h: Shortcuts}
-  - '&ng S'
-  - '&ng D'
-  - '&ng F'
-  - '&ng G'
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
-  - '&ng H'
-  - '&ng J'
-  - '&ng K'
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
-  - {t: '-', s: _}
-  - '&td0'
-  - '&ng Z'
-  - '&ng X'
-  - C
-  - '&ng V'
-  - '&ng B'
-  - MUTE
-  - $$mdi:arrow-down-bold$$
-  - '&ng N'
-  - '&ng M'
-  - '&ng COMMA'
-  - '&ng DOT'
-  - '&ng FSLH'
-  - {t: '=', s: +}
-  - LGUI
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
-  - {t: '$$mdi:backspace$$', h: Function&excel}
-  - {t: '$$mdi:keyboard-return$$', h: Shortcuts}
-  - RGUI
   Function&excel:
   - F7
   - F8
@@ -192,7 +192,7 @@ layers:
   - Sft+Gui+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-shift$$
   - LGUI
@@ -241,7 +241,7 @@ layers:
   - Sft+2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -416,4 +416,4 @@ combos:
   l: [Mac]
 - p: [17, 18]
   k: '&ng_off'
-  l: [Mac, Number]
+  l: [Mac, Naginata]
