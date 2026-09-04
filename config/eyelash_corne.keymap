@@ -152,7 +152,7 @@
             bindings = <
 &mt_impl LALT ESCAPE       &kp Q         &kp W  &kp E     &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O                    &kp P                &kp SINGLE_QUOTE
 &mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &kp S  &kp D     &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
-&td0                       &kp Z         &kp X  &ng C     &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
+&td0                       &kp Z         &kp X  &kp C     &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
                                                 &kp LGUI  &kp SPACE  &lt_impl 1 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
             >;
 
@@ -164,7 +164,7 @@
             display-name = "Naginata";
             bindings = <
 &mt_impl LALT ESCAPE       &ng Q         &ng W  &ng E     &ng R      &ng T                                   &kp UP                &ng Y                 &ng U             &ng I      &ng O                    &ng P                &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &ng S  &ng D     &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
+&mt_impl LEFT_CONTROL TAB  &ng A  &ng S  &ng D     &ng F      &ng G                         &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                 &ng J             &ng K      &ng L  &ng SEMI  &kp MINUS
 &td0                       &ng Z         &ng X  &kp C     &ng V      &ng B           &kp K_MUTE              &kp DOWN              &ng N                 &ng M             &ng COMMA  &ng DOT                  &ng FSLH             &kp EQUAL
                                                 &kp LGUI  &ng SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
             >;
