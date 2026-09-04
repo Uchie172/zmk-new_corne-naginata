@@ -183,10 +183,10 @@
 
         Layer_4 {
             bindings = <
-&kp K_MUTE    &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp F11        &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &none  &none
-&kp C_VOL_DN  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LC(F))  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none  &none
-&kp C_VOL_UP  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LS(LC(S))  &kp LG(TAB)       &kp LS(LG(TAB))     &none      &none  &kp LS(NUMBER_2)
-                                         &none           &none          &none                                    &none          &none             &none
+&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp F11        &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &none  &none  &none
+&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LC(F))  &kp LC(LEFT)      &kp LC(RIGHT)       &none  &none  &none
+&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LS(LC(S))  &kp LG(LS(TAB))   &kp LC(P)           &none  &none  &kp LS(NUMBER_2)
+                                  &none           &none          &none                                    &none          &none             &none
             >;
 
             sensor-bindings = <&inc_dec_kp SPACE LS(SPACE)>;
