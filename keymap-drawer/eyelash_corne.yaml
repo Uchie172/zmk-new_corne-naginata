@@ -117,7 +117,7 @@ layers:
   - {t: ']', s: '}'}
   - {t: '''', s: '"'}
   - '"'
-  - {t: '`', s: '~'}
+  - '%'
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+P
   - Ctl+$$mdi:arrow-right-bold$$
@@ -132,7 +132,7 @@ layers:
   - '}'
   - {t: \, s: '|'}
   - '|'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ^
   - {t: Gui+0, s: Gui+)}
   - Ctl+$$mdi:arrow-down-bold$$
   - {t: '=', s: +}
@@ -148,25 +148,25 @@ layers:
   - {t: '0', s: )}
   - {t: ., s: '>'}
   Tiling:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+Ctl+Gui+Q
-  - Ctl+Sft+W
-  - Sft+Ctl+E
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Sft+1
-  - Sft+Gui+2
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Sft+2
+  - Sft+Gui+1
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+Ctl+A
-  - Sft+Ctl+S
-  - Sft+Ctl+D
-  - Sft+Ctl+F
-  - Gui+Ctl+F
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -177,11 +177,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+Ctl+Z
-  - Sft+Ctl+X
-  - Sft+Ctl+C
-  - Sft+Ctl+V
-  - Gui+Alt+S
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+Gui+3
@@ -204,11 +204,11 @@ layers:
   - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Ctl+F
   - Ctl+$$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-down-bold$$
   - Ctl+P
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Alt+Gui+N
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+A
@@ -219,7 +219,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Alt+S
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -235,7 +235,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+Sft+N
   - Gui+Sft+$$mdi:keyboard-tab$$
-  - Gui+Sft+$$mdi:keyboard-space$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -392,55 +392,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  Fn:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [29, 14]
   k: {t: Browse, h: toggle}
@@ -462,3 +413,5 @@ combos:
   l: [Naginata]
 - p: [46, 47]
   k: Sft+Gui+$$mdi:keyboard-space$$
+- p: [8, 9]
+  k: Ctl+Gui+D
