@@ -33,7 +33,11 @@
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LGUI &to 0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LGUI &to 0>,
+                <&macro_press>,
+                <&to 0 &kp LGUI>;
         };
     };
 
@@ -150,10 +154,10 @@
         Layer_0 {
             display-name = "Mac";
             bindings = <
-&mt_impl LALT ESCAPE       &kp Q         &kp W  &kp E     &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O                    &kp P                &kp SINGLE_QUOTE
-&mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &kp S  &kp D     &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
-&td0                       &kp Z         &kp X  &kp C     &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
-                                                &kp LGUI  &kp SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &kp RGUI
+&mt_impl LALT ESCAPE       &kp Q         &kp W  &kp E    &kp R      &kp T                                   &kp UP                &kp Y                 &kp U             &kp I      &kp O                    &kp P                &kp SINGLE_QUOTE
+&mt_impl LEFT_CONTROL TAB  &lt_impl 4 A  &kp S  &kp D    &kp F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                 &kp J             &kp K      &mt_impl LEFT_CONTROL L  &mt_impl RSHFT SEMI  &kp MINUS
+&td0                       &kp Z         &kp X  &kp C    &kp V      &kp B           &kp K_MUTE              &kp DOWN              &kp N                 &kp M             &kp COMMA  &kp DOT                  &kp FSLH             &kp EQUAL
+                                                &ng_off  &kp SPACE  &lt_impl 2 DEL                                                &lt_impl 3 BACKSPACE  &lt_impl 4 ENTER  &ng_on
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
