@@ -92,7 +92,7 @@ layers:
   - '&ng DOT'
   - '&ng FSLH'
   - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&ng_off'
   - '&ng SPACE'
   - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - {t: '$$mdi:backspace$$', h: Function&excel}
