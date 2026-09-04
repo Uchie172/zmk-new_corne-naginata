@@ -81,7 +81,7 @@ layers:
   - '&td0'
   - '&ng Z'
   - '&ng X'
-  - C
+  - '&ng C'
   - '&ng V'
   - '&ng B'
   - MUTE
