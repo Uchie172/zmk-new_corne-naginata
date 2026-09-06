@@ -100,7 +100,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Numbers:
   - $$mdi:keyboard-esc$$
-  - (
+  - '&pair_paren'
   - )
   - {t: '`', s: '~'}
   - '~'
@@ -113,10 +113,10 @@ layers:
   - KP PLUS
   - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '[', s: '{'}
+  - '&pair_bracket'
   - {t: ']', s: '}'}
   - {t: '''', s: '"'}
-  - '"'
+  - '&pair_quote'
   - '%'
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+P
@@ -128,7 +128,7 @@ layers:
   - KP MINUS
   - {t: \, s: '|'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '{'
+  - '&pair_brace'
   - '}'
   - {t: \, s: '|'}
   - '|'
