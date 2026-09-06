@@ -62,7 +62,7 @@ layers:
   - '&ng I'
   - '&ng O'
   - '&ng P'
-  - {t: /, s: '?'}
+  - '&fullwidth_slash'
   - {t: '$$mdi:keyboard-tab$$', h: '&universal_ctrl'}
   - '&ng A'
   - '&ng S'
