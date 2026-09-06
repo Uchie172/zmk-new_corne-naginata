@@ -29,7 +29,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
   - {t: ;, s: ':'}
-  - '&td0'
+  - '&shcap'
   - Z
   - X
   - C
@@ -44,10 +44,10 @@ layers:
   - {t: /, s: '?'}
   - {t: '=', s: +}
   - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: Nav}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
-  - {t: '$$mdi:backspace$$', h: Tiling}
-  - {t: '$$mdi:keyboard-return$$', h: Nav}
+  - {t: '$$mdi:keyboard-space$$', h: Nav & WM}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Numbers}
+  - {t: '$$mdi:backspace$$', h: Fn & WM}
+  - {t: '$$mdi:keyboard-return$$', h: Nav & WM}
   - '&ng_on'
   Naginata:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
@@ -63,7 +63,7 @@ layers:
   - '&ng O'
   - '&ng P'
   - '"'
-  - {t: '$$mdi:keyboard-tab$$', h: '&ctrl_shortcut'}
+  - {t: '$$mdi:keyboard-tab$$', h: '&ctrl_sc'}
   - '&ng A'
   - '&ng S'
   - '&ng D'
@@ -78,7 +78,7 @@ layers:
   - '&ng L'
   - '&ng SEMI'
   - '!'
-  - '&td0'
+  - '&shcap'
   - '&ng Z'
   - '&ng X'
   - '&ng C'
@@ -92,13 +92,13 @@ layers:
   - '&ng DOT'
   - '&ng FSLH'
   - '?'
-  - {t: '&ng_off', h: '&cmd_shortcut'}
+  - {t: '&ng_off', h: '&cmd_sc'}
   - '&ng SPACE'
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
-  - {t: '$$mdi:backspace$$', h: Tiling}
-  - {t: '$$mdi:keyboard-return$$', h: Nav}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Numbers}
+  - {t: '$$mdi:backspace$$', h: Fn & WM}
+  - {t: '$$mdi:keyboard-return$$', h: Nav & WM}
   - {t: '$$mdi:transfer$$', type: trans}
-  Number:
+  Numbers:
   - $$mdi:keyboard-esc$$
   - (
   - )
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '0', s: )}
   - {t: ., s: '>'}
-  Tiling:
+  Fn & WM:
   - F1
   - F2
   - F3
@@ -196,7 +196,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  Nav:
+  Nav & WM:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -454,13 +454,8 @@ combos:
 - p: [26, 40]
   k: Gui+Ctl+$$mdi:keyboard-space$$
   l: [Mac, Naginata]
-- p: [23, 37]
-  k: '&ng_on'
-  l: [Mac]
-- p: [17, 32]
-  k: '&ng_off'
-  l: [Naginata]
 - p: [46, 47]
   k: Sft+Gui+$$mdi:keyboard-space$$
 - p: [8, 9]
   k: Ctl+Gui+D
+  l: [Mac, Naginata, Browse]
