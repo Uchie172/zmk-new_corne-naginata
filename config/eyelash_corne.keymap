@@ -34,8 +34,8 @@
         // ---------------------------------------------------------------------
         // 薙刀式 ON / OFF
         // ---------------------------------------------------------------------
-
         // macOSを日本語入力へ切り替え、薙刀式レイヤーへ移動
+
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -43,6 +43,7 @@
         };
 
         // macOSを英数入力へ切り替え、Macレイヤーへ戻る
+
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,7 +61,6 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-
             bindings =
                 <&macro_press>,
                 <&mo 8 &kp LGUI>,
@@ -70,12 +70,12 @@
         };
 
         // 押している間、Universal Cmdレイヤー + Controlを有効化。
+
         universal_ctrl: universal_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-
             bindings =
                 <&macro_press>,
                 <&mo 8 &kp LCTRL>,
@@ -87,18 +87,15 @@
         // ---------------------------------------------------------------------
         // Browse
         // ---------------------------------------------------------------------
-
         // 後で読む
         // SafariのReading Listへ現在のページを追加し、
         // 追加処理を待ってから現在のタブを閉じる。
+
         read_later: read_later {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <100>;
-
-            bindings =
-                <&kp LS(LG(D))>,
-                <&kp LG(W)>;
+            bindings = <&kp LS(LG(D)) &kp LG(W)>;
         };
     };
 
@@ -160,9 +157,9 @@
         // ---------------------------------------------------------------------
         // 薙刀式用 Hold-Tap
         // ---------------------------------------------------------------------
-
         // Hold：Universal Cmd
         // Tap ：薙刀式OFF
+
         ng_cmd: ng_cmd {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -174,6 +171,7 @@
 
         // Hold：Universal Ctrl
         // Tap ：指定キー
+
         ng_ctrl: ng_ctrl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -186,8 +184,8 @@
         // ---------------------------------------------------------------------
         // Encoder
         // ---------------------------------------------------------------------
-
         // SettingsレイヤーでRGB輝度を変更
+
         rgb_enc: rgb_enc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -195,10 +193,12 @@
         };
 
         // エンコーダによるスクロール用
+
         scrl_enc: scrl_enc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <30>;
         };
     };
@@ -219,6 +219,7 @@
         compatible = "zmk,combos";
 
         // Browseレイヤー
+
         browse {
             bindings = <&to 5>;
             key-positions = <29 14>;
@@ -226,6 +227,7 @@
         };
 
         // Mediaレイヤー
+
         media {
             bindings = <&to 6>;
             key-positions = <30 15>;
@@ -233,6 +235,7 @@
         };
 
         // Settingsレイヤー
+
         settings {
             bindings = <&to 7>;
             key-positions = <40 26 11>;
@@ -241,6 +244,7 @@
         };
 
         // 絵文字と記号（Ctrl + Cmd + Space）
+
         emo {
             bindings = <&kp LG(LC(SPACE))>;
             key-positions = <26 40>;
@@ -249,12 +253,14 @@
         };
 
         // Alfred（Shift + Cmd + Space）
+
         alfred {
             bindings = <&kp LS(LG(SPACE))>;
             key-positions = <46 47>;
         };
 
         // macOS「辞書で調べる」（Ctrl + Cmd + D）
+
         dictionary {
             bindings = <&kp LC(LG(D))>;
             key-positions = <8 9>;
@@ -284,9 +290,8 @@
 
         mac {
             display-name = "Mac";
-
             bindings = <
-&modtap LALT ESCAPE       &kp Q                 &kp W               &kp E                   &kp R              &kp T                                    &kp UP                &kp Y                  &kp U              &kp I            &kp O               &kp P                 &kp SINGLE_QUOTE
+&modtap LALT ESCAPE       &kp Q                 &kp W               &kp E                   &kp R              &kp T                                    &kp UP                &kp Y                  &kp U              &kp I            &kp O               &kp P                 &kp DOUBLE_QUOTES
 &modtap LEFT_CONTROL TAB  &modtap LEFT_SHIFT A  &modtap LEFT_ALT S  &modtap LEFT_CONTROL D  &modtap LGUI F     &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                  &modtap LGUI J     &modtap LCTRL K  &modtap LEFT_ALT L  &modtap LSHIFT MINUS  &kp SEMI
 &shcap                    &kp Z                 &kp X               &kp C                   &kp V              &kp B            &kp K_MUTE              &kp DOWN              &kp N                  &kp M              &kp COMMA        &kp DOT             &kp FSLH              &kp EQUAL
                                                                     &kp LGUI                &layertap 4 SPACE  &layertap 2 DEL                                                &layertap 3 BACKSPACE  &layertap 4 ENTER  &ng_on
@@ -303,9 +308,8 @@
 
         naginata {
             display-name = "Naginata";
-
             bindings = <
-&modtap LALT ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U              &ng I      &ng O    &ng P     &kp DOUBLE_QUOTES
+&modtap LALT ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U              &ng I      &ng O    &ng P     &kp SLASH
 &ng_ctrl 0 TAB       &ng A  &ng S  &ng D        &ng F      &ng G                          &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                  &ng J              &ng K      &ng L    &ng SEMI  &kp EXCL
 &shcap               &ng Z  &ng X  &ng C        &ng V      &ng B            &kp K_MUTE              &kp DOWN              &ng N                  &ng M              &ng COMMA  &ng DOT  &ng FSLH  &kp QUESTION
                                    &ng_cmd 0 0  &ng SPACE  &layertap 2 DEL                                                &layertap 3 BACKSPACE  &layertap 4 ENTER  &trans
@@ -339,7 +343,6 @@
 
         fn {
             display-name = "Fn";
-
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &none         &kp LG(LS(NUMBER_2))  &kp LS(LG(NUMBER_1))  &none           &none                     &none                     &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12           &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
@@ -401,15 +404,15 @@
 
         browse {
             display-name = "Browse";
-
             bindings = <
-&trans  &trans            &kp LS(LG(R))  &kp LG(R)  &kp LS(COMMA)  &kp LS(DOT)                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(LS(TAB))   &kp LC(TAB)    &trans     &kp LG(W)      &read_later                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans         &trans     &trans         &trans          &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                         &trans     &trans         &trans                                        &trans  &trans  &to 0
+&to 0   &kp LS(COMMA)    &kp LS(PERIOD)  &none   &kp LS(LG(R))          &kp LG(J)                          &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LS(TAB))  &kp LC(TAB)     &trans  &kp LG(W)              &read_later                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans          &trans  &trans                 &trans       &kp K_MUTE            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                         &trans  &kp LS(LG(BACKSLASH))  &trans                                             &trans  &trans  &to 0
             >;
 
             label = "Browse";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         // =====================================================================
@@ -455,7 +458,6 @@
 
         universal_cmd_layer {
             display-name = "Universal Cmd";
-
             bindings = <
 &trans  &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
 &trans  &kp A  &kp S  &kp D   &kp F   &kp G             &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
@@ -471,7 +473,5 @@
     // Conditional Layers
     // =========================================================================
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
