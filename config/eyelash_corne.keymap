@@ -343,7 +343,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
-            label = "Fn & WM";
+            label = "Fn";
         };
 
         // =====================================================================
