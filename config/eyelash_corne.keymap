@@ -85,6 +85,93 @@
         };
 
         // ---------------------------------------------------------------------
+        // Pair Symbols
+        // ---------------------------------------------------------------------
+        // 開き記号と閉じ記号をまとめて入力し、
+        // 最後にカーソルを1文字左へ戻して記号の内側へ配置する。
+        //
+        //   pair_paren    -> (|)
+        //   pair_bracket  -> [|]
+        //   pair_brace    -> {|}
+        //   pair_quote    -> "|"
+        //
+        // 「」と『』は日本語IME ON時の入力変換を利用する。
+        //
+        //   [] -> 「」
+        //   {} -> 『』
+        //
+        // これらのマクロ自体はレイヤーへ割り当てず、
+        // 必要な位置へ後からマッピングする。
+
+        // (|)
+
+        pair_paren: pair_paren {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LPAR>,
+                <&kp RPAR>,
+                <&kp LEFT>;
+        };
+
+        // [|]
+
+        pair_bracket: pair_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LBKT>,
+                <&kp RIGHT_BRACKET>,
+                <&kp LEFT>;
+        };
+
+        // {|}
+
+        pair_brace: pair_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LBRC>,
+                <&kp RIGHT_BRACE>,
+                <&kp LEFT>;
+        };
+
+        // "|"
+
+        pair_quote: pair_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOUBLE_QUOTES>,
+                <&kp DOUBLE_QUOTES>,
+                <&kp LEFT>;
+        };
+
+        // 「|」
+        // 日本語入力中に [] が「」になることを利用する。
+
+        pair_kagi: pair_kagi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LBKT>,
+                <&kp RIGHT_BRACKET>,
+                <&kp LEFT>;
+        };
+
+        // 『|』
+        // 日本語入力中に {} が『』になることを利用する。
+
+        pair_nijukagi: pair_nijukagi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LBRC>,
+                <&kp RIGHT_BRACE>,
+                <&kp LEFT>;
+        };
+
+        // ---------------------------------------------------------------------
         // Browse
         // ---------------------------------------------------------------------
         // 後で読む
@@ -375,31 +462,51 @@
         // Layer 5 : Browse
         //
         // Web閲覧用オーバーレイ。
+        // 右手はMagic Mouseに置いたまま、
+        // 左手でSafari / YouTubeの主要操作を行う。
         //
-        // 右手：
-        //   Magic Mouseでポインティング / クリック / スクロール
-        //
-        // 左手：
+        // 左手上段
         //
         //   Q        W        E        R        T
-        //   通常     Reader   Reload   速度-    速度+
+        //   速度-    速度+    無効     Reader   翻訳
+        //
+        //   Q : YouTube 再生速度を下げる（Shift + ,）
+        //   W : YouTube 再生速度を上げる（Shift + .）
+        //   R : Safari Reader（Shift + Cmd + R）
+        //   T : 翻訳（macOS側で Cmd + J を割り当て）
+        //
+        // 左手中段
         //
         //   A        S        D        F        G
         //   前Tab    次Tab    通常     Close    後で読む
         //
+        //   A : 前のタブ
+        //   S : 次のタブ
+        //   F : 現在のタブを閉じる
+        //   G : Reading Listへ追加して現在のタブを閉じる
+        //
+        // 左手下段
+        //
         //   Z        X        C        V        B
         //   通常     通常     通常     通常     通常
         //
-        // Browse専用機能以外はMacレイヤーを透過する。
+        // 左親指中央
         //
-        // そのためBrowse中でも、
+        //   Tab Overview（Shift + Cmd + \）
+        //
+        // 左上外側キー / 右親指外側キー
+        //
+        //   Browse終了 -> Macレイヤー
+        //
+        // Browse専用キー以外は原則Macレイヤーを透過する。
+        // そのため上書きしていないキーでは、
+        //
         //   Cmd+C : Copy
         //   Cmd+V : Paste
         //   Cmd+L : Address Bar
         //   Cmd+D : Bookmark
-        // など、上書きしていない通常ショートカットを使用できる。
         //
-        // 「後で読む」はReading Listへ追加後、現在のタブを閉じる。
+        // など、通常のMacショートカットをそのまま使用できる。
         // =====================================================================
 
         browse {
