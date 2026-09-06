@@ -102,16 +102,12 @@
         //
         // これらのマクロ自体はレイヤーへ割り当てず、
         // 必要な位置へ後からマッピングする。
-
         // (|)
 
         pair_paren: pair_paren {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LPAR>,
-                <&kp RPAR>,
-                <&kp LEFT>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
         };
 
         // [|]
@@ -119,10 +115,7 @@
         pair_bracket: pair_bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LBKT>,
-                <&kp RIGHT_BRACKET>,
-                <&kp LEFT>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LEFT>;
         };
 
         // {|}
@@ -130,10 +123,7 @@
         pair_brace: pair_brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LBRC>,
-                <&kp RIGHT_BRACE>,
-                <&kp LEFT>;
+            bindings = <&kp LBRC &kp RIGHT_BRACE &kp LEFT>;
         };
 
         // "|"
@@ -141,36 +131,13 @@
         pair_quote: pair_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp DOUBLE_QUOTES>,
-                <&kp DOUBLE_QUOTES>,
-                <&kp LEFT>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
         };
 
         // 「|」
         // 日本語入力中に [] が「」になることを利用する。
-
-        pair_kagi: pair_kagi {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LBKT>,
-                <&kp RIGHT_BRACKET>,
-                <&kp LEFT>;
-        };
-
         // 『|』
         // 日本語入力中に {} が『』になることを利用する。
-
-        pair_nijukagi: pair_nijukagi {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LBRC>,
-                <&kp RIGHT_BRACE>,
-                <&kp LEFT>;
-        };
-
         // ---------------------------------------------------------------------
         // Browse
         // ---------------------------------------------------------------------
@@ -413,10 +380,10 @@
 
         numbers {
             bindings = <
-&kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &kp AMPERSAND                              &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &kp PERCENT
-&none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PERCENT                  &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp BACKSLASH
-&none       &kp LBRC  &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE           &kp CARET      &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &kp DOLLAR
-                                         &none             &kp LSHFT          &none                                                                         &kp ENTER        &kp N0  &kp DOT
+&kp ESCAPE  &pair_paren    &kp RPAR           &kp GRAVE         &kp TILDE    &kp AMPERSAND                              &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &kp PERCENT
+&none       &pair_bracket  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &pair_quote  &kp PERCENT                  &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp BACKSLASH
+&none       &pair_brace    &kp RIGHT_BRACE    &kp BACKSLASH     &kp PIPE     &kp CARET      &kp LG(N0)                  &kp LC(DOWN_ARROW)                 &kp EQUAL        &kp N1  &kp N2   &kp N3  &kp KP_ENTER  &kp DOLLAR
+                                              &none             &kp LSHFT    &none                                                                         &kp ENTER        &kp N0  &kp DOT
             >;
 
             label = "Numbers";
