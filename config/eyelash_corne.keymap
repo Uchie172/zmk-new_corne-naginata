@@ -108,16 +108,12 @@
         //
         // マクロ自体はレイヤーへ割り当てず、
         // 必要な位置へ後からマッピングする。
-
         // (|)
 
         pair_paren: pair_paren {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LPAR>,
-                <&kp RPAR>,
-                <&kp LEFT>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
         };
 
         // [|]
@@ -125,10 +121,7 @@
         pair_bracket: pair_bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LBKT>,
-                <&kp RIGHT_BRACKET>,
-                <&kp LEFT>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LEFT>;
         };
 
         // {|}
@@ -136,10 +129,7 @@
         pair_brace: pair_brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LBRC>,
-                <&kp RIGHT_BRACE>,
-                <&kp LEFT>;
+            bindings = <&kp LBRC &kp RIGHT_BRACE &kp LEFT>;
         };
 
         // "|"
@@ -147,10 +137,7 @@
         pair_quote: pair_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp DOUBLE_QUOTES>,
-                <&kp DOUBLE_QUOTES>,
-                <&kp LEFT>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
         };
 
         // 「|」
@@ -162,12 +149,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <20>;
-
-            bindings =
-                <&kp LBKT>,
-                <&kp RIGHT_BRACKET>,
-                <&kp ENTER>,
-                <&kp LEFT>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp ENTER &kp LEFT>;
         };
 
         // 『|』
@@ -179,18 +161,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <20>;
-
-            bindings =
-                <&kp LBRC>,
-                <&kp RIGHT_BRACE>,
-                <&kp ENTER>,
-                <&kp LEFT>;
+            bindings = <&kp LBRC &kp RIGHT_BRACE &kp ENTER &kp LEFT>;
         };
 
         // ---------------------------------------------------------------------
         // Full-width Symbols
         // ---------------------------------------------------------------------
-
         // 全角スラッシュ「／」
         //
         // 日本語入力中に「・」を入力し、
@@ -202,11 +178,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <20>;
-
-            bindings =
-                <&ng FSLH>,
-                <&kp LC(L)>,
-                <&kp ENTER>;
+            bindings = <&kp SLASH &kp LC(L) &kp ENTER>;
         };
 
         // ---------------------------------------------------------------------
@@ -434,7 +406,7 @@
         naginata {
             display-name = "Naginata";
             bindings = <
-&modtap LALT ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U              &ng I      &ng O    &ng P     &kp SLASH
+&modtap LALT ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U              &ng I      &ng O    &ng P     &fullwidth_slash
 &ng_ctrl 0 TAB       &ng A  &ng S  &ng D        &ng F      &ng G                          &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                  &ng J              &ng K      &ng L    &ng SEMI  &kp EXCL
 &shcap               &ng Z  &ng X  &ng C        &ng V      &ng B            &kp K_MUTE              &kp DOWN              &ng N                  &ng M              &ng COMMA  &ng DOT  &ng FSLH  &kp QUESTION
                                    &ng_cmd 0 0  &ng SPACE  &layertap 2 DEL                                                &layertap 3 BACKSPACE  &layertap 4 ENTER  &trans
