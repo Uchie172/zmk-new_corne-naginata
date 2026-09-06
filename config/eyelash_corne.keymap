@@ -312,11 +312,11 @@
         };
 
         // =====================================================================
-        // Layer 2 : Number
+        // Layer 2 : Numbers
         // 数字・記号・テンキー
         // =====================================================================
 
-        number {
+        numbers {
             bindings = <
 &kp ESCAPE  &kp LPAR  &kp RPAR           &kp GRAVE         &kp TILDE          &kp AMPERSAND                              &kp LC(UP_ARROW)                   &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp KP_PLUS   &kp PERCENT
 &none       &kp LBKT  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PERCENT                  &kp LC(LEFT)  &kp LC(P)           &kp LC(RIGHT)  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6  &kp KP_MINUS  &kp BACKSLASH
@@ -329,11 +329,11 @@
         };
 
         // =====================================================================
-        // Layer 3 : Fn & WM
-        // Function / Window Management
+        // Layer 3 : Fn & Shortcut
+        // ファンクションキーとショートカット
         // =====================================================================
 
-        fn_wm {
+        fn {
             display-name = "Fn";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &none         &kp LG(LS(NUMBER_2))  &kp LS(LG(NUMBER_1))  &none           &none                     &none                     &none
@@ -347,8 +347,8 @@
         };
 
         // =====================================================================
-        // Layer 4 : Nav
-        // カーソル / ナビゲーション
+        // Layer 4 : NavとWindow Management
+        // カーソル / ナビゲーションとウィンドウマネジメント（Exposeとか）
         // =====================================================================
 
         nav {
