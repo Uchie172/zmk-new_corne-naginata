@@ -77,7 +77,7 @@ layers:
   - '&ng K'
   - '&ng L'
   - '&ng SEMI'
-  - '&hyphen'
+  - '&hyphens'
   - '&shcap'
   - '&ng Z'
   - '&ng X'
@@ -222,7 +222,7 @@ layers:
   - Gui+Alt+S
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: Alt+Ctl+Gui+-, s: Alt+Ctl+Gui+_}
+  - Alt+Ctl+Gui+L
   - Alt+Ctl+Gui+H
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
