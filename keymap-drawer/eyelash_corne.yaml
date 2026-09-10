@@ -77,7 +77,7 @@ layers:
   - '&ng K'
   - '&ng L'
   - '&ng SEMI'
-  - '!'
+  - '&hyphen'
   - '&shcap'
   - '&ng Z'
   - '&ng X'
@@ -187,8 +187,8 @@ layers:
   - Sft+Gui+1
   - Sft+Gui+2
   - {t: Sft+Gui+5, s: Sft+Gui+%}
-  - Sft+Ctl+Gui+3
-  - Sft+Gui+Ctl+4
+  - '&ng_on'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -208,7 +208,7 @@ layers:
   - Ctl+$$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-down-bold$$
   - Ctl+P
-  - Alt+Gui+N
+  - Alt+Gui+Ctl+Y
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+A
@@ -222,8 +222,8 @@ layers:
   - Gui+Alt+S
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Alt+Ctl+Gui+-, s: Alt+Ctl+Gui+_}
+  - Alt+Ctl+Gui+H
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -233,11 +233,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Alt+N
   - Gui+Sft+$$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Alt+Ctl+Gui+N
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
