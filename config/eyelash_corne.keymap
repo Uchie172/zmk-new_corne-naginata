@@ -205,7 +205,7 @@
         hyphen: hyphen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp MINUS &kp MINUS &kp MINUS &kp RET>;
+            bindings = <&kp LANG2 &kp MINUS &kp MINUS &kp MINUS>;
             label = "HYPHEN";
         };
     };
@@ -317,7 +317,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "HYPHENS";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&hyphen>;
+            bindings = <&kp EXCL>, <&hyphen>;
         };
     };
 
@@ -428,12 +428,12 @@
             display-name = "Naginata";
             bindings = <
 &modtap LALT ESCAPE  &ng Q  &ng W  &ng E        &ng R      &ng T                                    &kp UP                &ng Y                  &ng U              &ng I      &ng O    &ng P     &fullwidth_slash
-&ng_ctrl 0 TAB       &ng A  &ng S  &ng D        &ng F      &ng G                          &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                  &ng J              &ng K      &ng L    &ng SEMI  &kp EXCL
+&ng_ctrl 0 TAB       &ng A  &ng S  &ng D        &ng F      &ng G                          &kp LEFT  &kp ENTER  &kp RIGHT  &ng H                  &ng J              &ng K      &ng L    &ng SEMI  &hyphen
 &shcap               &ng Z  &ng X  &ng C        &ng V      &ng B            &kp K_MUTE              &kp DOWN              &ng N                  &ng M              &ng COMMA  &ng DOT  &ng FSLH  &kp QUESTION
                                    &ng_cmd 0 0  &ng SPACE  &layertap 2 DEL                                                &layertap 3 BACKSPACE  &layertap 4 ENTER  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scrl_enc>;
             label = "Naginata";
         };
 
@@ -465,9 +465,9 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &none         &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))  &none           &none                     &none                     &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12           &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4                    &none                     &none
-&none   &none   &none   &none    &none    &none    &none           &none         &kp LS(LG(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(N5))  &kp LS(LC(LG(NUMBER_3)))  &kp LS(LG(LC(NUMBER_4)))  &none
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &none         &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))  &none           &none   &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12           &none  &none  &none  &none                 &kp LG(N1)            &kp LC(U)       &kp F4  &none  &none
+&none   &none   &none   &none    &none    &none    &none           &none         &kp LS(LG(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(N5))  &ng_on  &none  &none
                         &none    &none    &none                                  &none                 &kp LEFT_SHIFT        &kp LGUI
             >;
 
@@ -482,9 +482,9 @@
 
         nav {
             bindings = <
-&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)  &kp LA(LG(N))  &none
-&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LA(S))  &kp LC(LEFT)      &kp LC(RIGHT)       &none      &none          &none
-&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &none          &kp LG(LS(TAB))   &none               &none      &none          &none
+&none  &none      &none           &kp UP_ARROW    &kp PAGE_UP    &none                      &none         &kp LG(LC(F))  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(P)              &kp LA(LG(LC(Y)))  &none
+&none  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(E)           &none  &none  &none  &kp LG(LA(S))  &kp LC(LEFT)      &kp LC(RIGHT)       &kp LA(LC(LG(MINUS)))  &kp LA(LC(LG(H)))  &none
+&none  &none      &none           &none           &kp PAGE_DOWN  &none      &none           &none         &kp LG(LA(N))  &kp LG(LS(TAB))   &none               &none                  &kp LA(LC(LG(N)))  &none
                                   &none           &none          &none                                    &none          &none             &none
             >;
 
