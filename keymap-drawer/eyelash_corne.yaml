@@ -28,7 +28,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
-  - {t: ;, s: ':'}
+  - '&hyphens'
   - '&shcap'
   - Z
   - X
@@ -233,7 +233,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Alt+Sft+N
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+Sft+$$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -455,7 +455,7 @@ combos:
   k: Gui+Ctl+$$mdi:keyboard-space$$
   l: [Mac, Naginata]
 - p: [46, 47]
-  k: Sft+Gui+$$mdi:keyboard-space$$
+  k: '&alfred'
 - p: [8, 9]
   k: Ctl+Gui+D
   l: [Mac, Naginata, Browse]
