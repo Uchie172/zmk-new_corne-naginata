@@ -32,6 +32,22 @@
 
     macros {
         // ---------------------------------------------------------------------
+        // macOS Input Source
+        // ---------------------------------------------------------------------
+        // 英数入力へ確実に切り替えるため、LANG2を2回送信する。
+        // BTT等によるLANG2検出の取りこぼし対策も兼ねる。
+        //
+        //   LANG2 -> 30ms -> LANG2
+
+        en_mode: en_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LANGUAGE_2>;
+        };
+
+        // ---------------------------------------------------------------------
         // 薙刀式 ON / OFF
         // ---------------------------------------------------------------------
         // macOSを日本語入力へ切り替え、薙刀式レイヤーへ移動
@@ -42,14 +58,15 @@
             bindings = <&macro_tap>, <&kp LANGUAGE_1 &to 1>;
         };
 
-        // macOSを英数入力へ切り替え、Macレイヤーへ戻る
+        // macOSを英数入力へ切り替え、Macレイヤーへ戻る。
+        // 英数切替には共通のen_modeを使用する。
 
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LANGUAGE_2 &to 0 &kp LANGUAGE_2>,
+                <&en_mode &to 0>,
                 <&macro_press>;
         };
 
@@ -108,10 +125,6 @@
         //
         // 日本語ペアはIMEで生成された文字をEnterで確定してから
         // カーソルを1文字左へ戻す。
-        //
-        // マクロ自体はレイヤーへ割り当てず、
-        // 必要な位置へ後からマッピングする。
-        // (|)
 
         pair_paren: pair_paren {
             compatible = "zmk,behavior-macro";
@@ -119,23 +132,17 @@
             bindings = <&kp LPAR &kp RPAR &kp LEFT>;
         };
 
-        // [|]
-
         pair_bracket: pair_bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LEFT>;
         };
 
-        // {|}
-
         pair_brace: pair_brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBRC &kp RIGHT_BRACE &kp LEFT>;
         };
-
-        // "|"
 
         pair_quote: pair_quote {
             compatible = "zmk,behavior-macro";
@@ -144,9 +151,6 @@
         };
 
         // 「|」
-        //
-        // 日本語入力中に [] が「」になることを利用。
-        // 「」を入力 → Enterで確定 → ←
 
         pair_kagi: pair_kagi {
             compatible = "zmk,behavior-macro";
@@ -156,9 +160,6 @@
         };
 
         // 『|』
-        //
-        // 日本語入力中に {} が『』になることを利用。
-        // 『』を入力 → Enterで確定 → ←
 
         pair_nijukagi: pair_nijukagi {
             compatible = "zmk,behavior-macro";
@@ -174,8 +175,6 @@
         //
         // 日本語入力中に「・」を入力し、
         // Ctrl+L（全角英字変換）で「／」へ変換して確定する。
-        //
-        //   ・ -> Ctrl+L -> ／ -> Enter
 
         fullwidth_slash: fullwidth_slash {
             compatible = "zmk,behavior-macro";
@@ -187,7 +186,6 @@
         // ---------------------------------------------------------------------
         // Browse
         // ---------------------------------------------------------------------
-        // 後で読む
         // SafariのReading Listへ現在のページを追加し、
         // 追加処理を待ってから現在のタブを閉じる。
 
@@ -198,17 +196,21 @@
             bindings = <&kp LS(LG(D)) &kp LG(W)>;
         };
 
+        // Alfred起動後、英数入力へ確実に切り替える。
+
         alfred: alfred {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(SPACE)) &kp LANG2>;
+            bindings = <&kp LG(LS(SPACE)) &en_mode>;
             label = "ALFRED";
         };
+
+        // ハイフン3個を入力する前に英数入力へ確実に切り替える。
 
         hyphen: hyphen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp MINUS &kp MINUS &kp MINUS>;
+            bindings = <&en_mode &kp MINUS &kp MINUS &kp MINUS>;
             label = "HYPHEN";
         };
     };
@@ -238,9 +240,6 @@
         // ---------------------------------------------------------------------
         // Tap ：通常キー
         // Hold：Modifier
-        //
-        // Home Row Modsにも使用できる汎用Mod-Tap。
-        // 他キーとの同時押しではHoldを優先する。
 
         modtap: modtap {
             compatible = "zmk,behavior-hold-tap";
@@ -255,8 +254,6 @@
         // ---------------------------------------------------------------------
         // Layer-Tap
         // ---------------------------------------------------------------------
-        // Tap ：通常キー
-        // Hold：指定レイヤーを有効化
 
         layertap: layertap {
             compatible = "zmk,behavior-hold-tap";
@@ -271,8 +268,6 @@
         // ---------------------------------------------------------------------
         // 薙刀式用 Hold-Tap
         // ---------------------------------------------------------------------
-        // Hold：Universal Cmd
-        // Tap ：薙刀式OFF
 
         ng_cmd: ng_cmd {
             compatible = "zmk,behavior-hold-tap";
@@ -282,9 +277,6 @@
             flavor = "hold-preferred";
             bindings = <&universal_cmd>, <&ng_off>;
         };
-
-        // Hold：Universal Ctrl
-        // Tap ：指定キー
 
         ng_ctrl: ng_ctrl {
             compatible = "zmk,behavior-hold-tap";
@@ -298,15 +290,12 @@
         // ---------------------------------------------------------------------
         // Encoder
         // ---------------------------------------------------------------------
-        // SettingsレイヤーでRGB輝度を変更
 
         rgb_enc: rgb_enc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
-
-        // エンコーダによるスクロール用
 
         scrl_enc: scrl_enc {
             compatible = "zmk,behavior-sensor-rotate";
@@ -388,7 +377,9 @@
             layers = <0 1 5>;
         };
 
-        // 書式なし貼り付け
+        // ---------------------------------------------------------------------
+        // Plain Paste
+        // ---------------------------------------------------------------------
         //
         // 通常：
         //   Cmd -> V = Cmd+V
@@ -396,8 +387,8 @@
         // 同時押し：
         //   Cmd + V = Cmd+Shift+Option+V
         //
-        // 物理的には同じ2キーを使い、
-        // 押下タイミングによって通常PasteとPlain Pasteを使い分ける。
+        // 同じ物理キーを使い、
+        // 押下タイミングだけで通常PasteとPlain Pasteを使い分ける。
 
         plain_paste {
             bindings = <&kp LG(LA(LS(V)))>;
@@ -424,7 +415,6 @@
 
         // =====================================================================
         // Layer 0 : Mac
-        // 通常入力
         // =====================================================================
 
         mac {
@@ -442,7 +432,6 @@
 
         // =====================================================================
         // Layer 1 : Naginata
-        // 薙刀式
         // =====================================================================
 
         naginata {
@@ -460,10 +449,6 @@
 
         // =====================================================================
         // Layer 2 : Numbers
-        // 数字・記号・テンキー
-        //
-        // ペア記号マクロは定義済みだが、
-        // 現時点ではこのレイヤーへ割り当てていない。
         // =====================================================================
 
         numbers {
@@ -480,7 +465,6 @@
 
         // =====================================================================
         // Layer 3 : Fn
-        // ファンクションキーとショートカット
         // =====================================================================
 
         fn {
@@ -498,7 +482,6 @@
 
         // =====================================================================
         // Layer 4 : Nav & WM
-        // ナビゲーション / Window Management
         // =====================================================================
 
         nav {
@@ -515,53 +498,6 @@
 
         // =====================================================================
         // Layer 5 : Browse
-        //
-        // Web閲覧用オーバーレイ。
-        // 右手はMagic Mouseに置いたまま、
-        // 左手でSafari / YouTubeの主要操作を行う。
-        //
-        // 左手上段
-        //
-        //   Q        W        E        R        T
-        //   速度-    速度+    無効     Reader   翻訳
-        //
-        //   Q : YouTube 再生速度を下げる（Shift + ,）
-        //   W : YouTube 再生速度を上げる（Shift + .）
-        //   R : Safari Reader（Shift + Cmd + R）
-        //   T : 翻訳（macOS側で Cmd + J を割り当て）
-        //
-        // 左手中段
-        //
-        //   A        S        D        F        G
-        //   前Tab    次Tab    通常     Close    後で読む
-        //
-        //   A : 前のタブ
-        //   S : 次のタブ
-        //   F : 現在のタブを閉じる
-        //   G : Reading Listへ追加して現在のタブを閉じる
-        //
-        // 左手下段
-        //
-        //   Z        X        C        V        B
-        //   通常     通常     通常     通常     通常
-        //
-        // 左親指中央
-        //
-        //   Tab Overview（Shift + Cmd + \）
-        //
-        // 左上外側キー / 右親指外側キー
-        //
-        //   Browse終了 -> Macレイヤー
-        //
-        // Browse専用キー以外は原則Macレイヤーを透過する。
-        // そのため上書きしていないキーでは、
-        //
-        //   Cmd+C : Copy
-        //   Cmd+V : Paste
-        //   Cmd+L : Address Bar
-        //   Cmd+D : Bookmark
-        //
-        // など、通常のMacショートカットをそのまま使用できる。
         // =====================================================================
 
         browse {
@@ -579,7 +515,6 @@
 
         // =====================================================================
         // Layer 6 : Media
-        // メディア / アプリ操作
         // =====================================================================
 
         media {
@@ -596,7 +531,6 @@
 
         // =====================================================================
         // Layer 7 : Settings
-        // Bluetooth / RGB / Bootloader
         // =====================================================================
 
         settings {
@@ -613,9 +547,6 @@
 
         // =====================================================================
         // Layer 8 : Universal Cmd
-        //
-        // 薙刀式使用中でもQWERTY配置で
-        // Cmd / Ctrlショートカットを使用するための内部レイヤー。
         // =====================================================================
 
         universal_cmd_layer {
