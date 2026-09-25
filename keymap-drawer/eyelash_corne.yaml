@@ -459,3 +459,6 @@ combos:
 - p: [8, 9]
   k: Ctl+Gui+D
   l: [Mac, Naginata, Browse]
+- p: [42, 32]
+  k: Gui+Alt+Sft+V
+  l: [Mac, Naginata]
