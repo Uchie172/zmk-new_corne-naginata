@@ -44,7 +44,7 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <0>;
-            bindings = <&kp LANGUAGE_2 &kp LANGUAGE_2>;
+            bindings = <&kp LANGUAGE_2>;
         };
 
         // ---------------------------------------------------------------------
@@ -64,10 +64,7 @@
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&en_mode &to 0>,
-                <&macro_press>;
+            bindings = <&macro_tap>, <&en_mode &to 0>, <&macro_press>;
         };
 
         // ---------------------------------------------------------------------
